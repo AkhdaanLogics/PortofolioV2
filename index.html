@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhdaan's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-a"></i>
+            <div class="logo-text">Muhammad Akhdaan</div>
+        </div>
+        <nav>
+            <div class="togglebtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navlink">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#certificate">Certificate</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="wrapper">
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/profile.png" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Muhammad Akhdaan</h1>
+                    <p>I am a beginner web developer passionate about creating captivating user experiences and enhancing my technical skills in developing effective and efficient web applications.</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn active">Download CV</a>
+                        <a href="#contact" class="btn">Contact</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://discord.com/users/@nevertheless____" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/m.akhdaan__/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/AkhdaanLogics" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="wrapper">
+            <h2 class="section-title">My Portfolio</h2>
+            <p class="section-description">Here are some of my recent projects</p>
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item">
+                    <img src="images/project1.jpg" alt="Project 1">
+                    <div class="portfolio-info">
+                        <h3>Web Development</h3>
+                        <p>Personal Portfolio Website</p>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item">
+                    <img src="images/project2.jpg" alt="Project 2">
+                    <div class="portfolio-info">
+                        <h3>UI/UX Design</h3>
+                        <p>Mobile App Design</p>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Section -->
+    <section id="certificate">
+        <div class="wrapper">
+            <h2 class="section-title">Certificates</h2>
+            <p class="section-description">My achievements and certifications</p>
+            <div class="certificate-grid">
+                <div class="certificate-item">
+                    <h3>Web Development</h3>
+                    <p>Complete Web Development Bootcamp</p>
+                    <small>Issued by: Udemy</small>
+                </div>
+                <div class="certificate-item">
+                    <h3>UI/UX Design</h3>
+                    <p>User Interface Design Fundamentals</p>
+                    <small>Issued by: Coursera</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="wrapper">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-description">Get in touch with me</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> akhdaan@amikom.ac.id</p>
+                    <p><i class="fas fa-phone"></i> +62 666 333 777</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Tuban, Jawa Timur, Indonesia</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+    <script>
+        // Toggle Menu
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlink");
+        var links = document.querySelector(".navlink li");
+
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        // Typed.js
+        var typed = new Typed(".input", {
+            strings: ["Frontend Developer", "Web Developer", "UI/UX Designer"],
+            typeSpeed: 60,
+            backSpeed: 55,
+            loop: true
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
