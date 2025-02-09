@@ -97,14 +97,41 @@ nav .navlink li{
     display: inline-block;
 }
 
-nav .navlink li a{
+nav .navlink li a {
     color: #e5e5e5;
     margin-right: 2.5rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
 }
 
+nav .navlink li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007ced;
+    transition: width 0.3s ease;
+}
+
+/* Hover effect */
 nav .navlink li a:hover {
     color: #007ced;
+}
+
+nav .navlink li a:hover::after {
+    width: 100%;
+}
+
+/* Active state */
+nav .navlink li a.active {
+    color: #007ced;
+}
+
+nav .navlink li a.active::after {
+    width: 100%;
 }
 
 /* Home Section */
@@ -180,8 +207,26 @@ nav .navlink li a:hover {
     border-radius: 30px;
     border: 2px solid #e5e5e5;
     box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    position: relative;
+    transition: all 0.3s ease;
+}
+.btn-group .btn:hover {
+    background-color: #007ced;
+    border-color: #007ced;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 15px -8px rgb(0 0 0 / 90%);
+}
+.btn-group .btn:hover::after {
+    width: 200%;
+    height: 200%;
 }
 
+/* Active state */
+.btn-group .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 5px -8px rgb(0 0 0 / 78%);
+}
 .btn.active{
     border-color: #007ced;
 }
