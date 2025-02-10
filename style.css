@@ -651,3 +651,15 @@ nav .navlink li a:hover::after {
         margin-top: 20px;
     }
 }
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #3a3b3f;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.footer-bottom p {
+    color: #bbbbbb;
+}
